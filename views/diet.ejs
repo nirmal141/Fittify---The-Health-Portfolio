@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glass card</title>
+    <link rel="stylesheet" href="/diet.css">
+</head>
+<body>
+   <section>
+  
+    <div class="pot">
+        <!-- <div class="circle"></div>
+        <div class="circle"></div> -->
+        <span style="--i:1;" ></span>
+        <span style="--i:2;" ></span>
+        <span style="--i:3;" ></span>
+        <span style="--i:4;" ></span>
+        <div class="glass">
+          <h1>Diet Plan</h1><br>
+          <div class="plan">
+            
+                Class: <%=myClass%> <br>        
+                Protein: <%=theObject.protein%> <br>
+                Carbs:  <%=theObject.carbs%>  <br>
+                Fats: <%=theObject.fats%> <br>
+                Calorie  
+                Intake(in KJ) : <%=theObject.calorieIntake%> <br>
+               Supplements:<br> <%=theObject.supplement%>
+           
+         
+          </div>
+         
+        </div>
+      
+        <div class="square"  >
+
+        </div>
+    </div>
+    </section>
+
+
+
+
+   					<!--   merging card tilts   +    merging recommendation  -->
+
+
+
+    <div class="container">
+        <% if(myClass=="Ecto"){ %>
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Ecto</h3>
+                <p>
+                    <b> Diet </b> <br>
+                    <b> Type</b> : High Carbs <br>
+                    <b> Specifics</b> : Adhere to Good Carbs <br>
+                    <b> Quote </b>: Less Movements Is More Muscle <br>
+                </p>
+                <a href="/detailDeit">Details</a> 
+    </b>       </div>
+        </div>
+        <%}%>
+        <% if(myClass=="Endo"){ %>
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Endo</h3>
+                <p>
+                    <b> Diet </b> <br>
+                    <b> Type</b> : Low Carbs <br>
+                    <b> Specifics</b> : Incorporate Good Fats <br>
+                    <b> Quote </b>: Difference between Fat and Fit is " I " <br>
+                </p>
+                <form action="/detailDiet" method="get" id="my_id" >
+                    <a onclick="document.getElementById('my_id').submit();">Details</a>
+                </form>
+               
+            </div>
+        </div>
+        <% } %>
+        <% if(myClass=="Meso"){ %>
+        <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Meso</h3>
+                <p>   
+                    <b> Diet </b> <br>
+                    <b> Type</b> : High Portien <br>
+                    <b> Specifics</b> : Control Carbs and Fats <br>
+                    <b> Quote </b>: Uncomfortable is the new Comfortable <br>
+                </p>
+                <form action="/detailDeit" method="get" id="my_id_Deit" >
+                    <a onclick="document.getElementById('my_id_Deit').submit();">Details</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+
+    <div class="mug">
+        <ul>
+            <form action="/logout" method="get" id="my_id">
+                <li  class=" links " style="--i:5;"><a class="tags" onclick="document.getElementById('my_id').submit();"><ion-icon name="home-outline"></ion-icon></a></li>
+                </form>
+                <form action="/dashboard/<%=user._id%>" method="get" id="my_dash">
+            <li class="links" style="--i:1;"><a class="tags" onclick="document.getElementById('my_dash').submit();"><ion-icon name="fitness-outline"></ion-icon></a></li>
+            </form>
+            <li class="active links" style="--i:2;"><a class="tags" href="#"><ion-icon name="wine-outline"></ion-icon></a></li>
+            <form action="/workout/<%=user._id%>" method="get" id="my_workout">
+                <li class="links" style="--i:3;"><a class="tags" onclick="document.getElementById('my_workout').submit();"><ion-icon name="bicycle-outline"></ion-icon></a></li>
+            </form>
+            <li class="links" style="--i:4;"><a class="tags" href="#"><ion-icon name="call-outline"></ion-icon></a></li>
+    
+            <div id="marker"></div>
+            <script>
+                
+                let marker = document.querySelector('#marker');
+                let list = document.querySelectorAll('ul li');
+    
+                function moveIndicator(e){
+                    marker.style.left = e.offsetLeft+'px';
+                    marker.style.width = e.offsetWidth+'px';
+                }
+    
+                function activeLink(){
+                    list.forEach((item)=>
+                    item.classList.remove('active'));
+                    this.classList.add('active');
+                }
+    
+                list.forEach( (link) => {
+    
+                    link.addEventListener('mousemove', function(e){
+                        moveIndicator(e.target);
+                    })
+                })
+    
+                list.forEach( (link) =>
+                 link.addEventListener('mouseover', activeLink));
+    
+            </script>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    
+    
+
+   
+</body>
+</html>

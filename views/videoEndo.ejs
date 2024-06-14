@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Workout</title>
+    <link rel="stylesheet" href="/videoEndo.css">
+</head>
+<body>
+    <div class="backButton">
+       
+        <a href="#" onclick="history.back()"> <img id="rotate" src="/images/backButton.png" alt=""></a>
+    </div>
+
+
+    <div class="container">
+        <h1>ENDOMorph Series</h1>
+        <div class="row">
+            
+            <div class="col">
+                <div class="cover-img">
+                    <h2>Yatinder Singh</h2>
+                    <img src="https://qph.fs.quoracdn.net/main-qimg-dba397647be56b770c2347444ba4f835" width="100%" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/yatinderIntro.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <!-- 1st -->
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/HIIT.mp4')">
+                    <p>HIIT <BR> WORKOUT</BR> </p>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/pull.mp4')">
+                    <p> PULL<BR>WORKOUT<BR>SERIES</p>
+                    </div>
+                </div>
+                <!-- 3rd --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/fatLegs.mp4')">
+                    <p>PUSH<BR>WORKOUT</BR> SERIES </p>
+                    </div>
+                </div>
+                <!-- 4th --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/legz.mp4')">
+                    <p>LEGS <BR> WORKOUT </p>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+            <video id="myVideo" width="100%" height="750" controls >
+                <source src="/videos/yatinderIntro.mp4"  type="video/mp4"  >
+            </video>
+            <img id="rotate" src="/images/cancel.png" class="close-btn" onclick="stopVideo()">
+        </div>
+
+<script>
+
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none";
+        myVideo.pause();
+
+
+    }
+
+    function playVideo(file){
+
+        myVideo.src = file;
+        videoPlayer.style.display = "block";
+        myVideo.play();
+
+    }
+
+</script>
+
+
+
+    </body>
+</html>

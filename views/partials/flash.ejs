@@ -1,0 +1,14 @@
+<% if(success && success.length) { %>
+    <div id="flash" class="alert alert-success alert-dismissible fade show" role="alert">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+    <% if(error && error.length) { %>
+    <div id="flash" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <ion-icon name="exclamation-circle"></ion-icon>
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>

@@ -1,0 +1,406 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to left top, #000000 60%, #5a189a, #47106b);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+}
+
+body::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(#9200f3, #861080);
+	clip-path: circle(30% at right 70%);
+}
+
+.pot {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/* z-index: 2; */
+}
+
+.pot span {
+	position: absolute;
+	top: 0;
+	left: 220px;
+	width: 260px;
+	height: 260px;
+	display: block;
+	background: #000;
+	border-radius: 50%;
+	transform-origin: 125px 0;
+	transform: rotate(calc(90deg * var(--i)));
+	filter: blur(90px);
+	/* opacity: 0.85; */
+}
+
+.pot span:nth-child(1) {
+	background: #ff00b3;
+}
+
+.pot span:nth-child(2) {
+	background: #e0aaff;
+}
+
+.pot span:nth-child(3) {
+	background: #9e35fa;
+}
+
+.pot span:nth-child(4) {
+	background: #e0aaff;
+}
+
+.pot .glass {
+	position: absolute;
+	left: 150px;
+	/* top: 50px; */
+	width: 450px;
+	height: 550px;
+	background: linear-gradient(to top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+	border-radius: 0px 15px 15px 15px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-right: 2px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+	opacity: 0.64;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	/* backdrop-filter: blur(50px); */
+}
+
+.pot .glass::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	/* backdrop-filter: blur(5px); */
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+	pointer-events: none;
+	transform: skewX(345deg);
+	z-index: 1;
+}
+
+.pot .square {
+	position: absolute;
+	top: 50%;
+	left: 35px;
+	width: 150px;
+	height: 150px;
+	background: linear-gradient(
+		to right bottom rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.8)
+	);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2), 0 25px 60px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	animation: animate 8s linear infinite;
+	transition: 1s;
+	z-index: 5;
+}
+
+.pot .square:hover {
+	border-radius: 50%;
+	backdrop-filter: blur(0px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		transform: translateY(-75px);
+	}
+	50% {
+		transform: translateY(40px);
+	}
+}
+
+.backButton img {
+	width: 3em;
+	height: 3em;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	transition: 0.5s;
+}
+
+.backButton img:hover {
+	transform: rotate(-25deg);
+}
+
+.pot .glass h1 {
+	/* font-size: larger; */
+	/* position: relative; */
+	background: rgba(255, 255, 255, 0.2);
+	/* background: linear-gradient(to left top, #000000 60%, #5a189a, #47106b); */
+	padding: 20px;
+	font-weight: 800;
+	width: 100%;
+	/* height: 100%; */
+	text-align: center;
+	display: block;
+	font-size: 2em;
+	color: #000;
+	margin-right: 20px;
+}
+
+.pot .glass .plan {
+	position: absolute;
+	display: block;
+	max-width: fit-content;
+	top: 2em;
+	margin: 1em 2em;
+	padding: 0.5em;
+	font-size: 1.7em;
+	line-height: 1.8;
+	font-weight: 600;
+	z-index: 100;
+}
+
+/* .card .glass h2 h3 {
+	font-size: 1.5em;
+	position: absolute;
+	top: -5px;
+	font-weight: 400;
+} */
+.pot .circle {
+	border-radius: 50%;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+.pot .circle:nth-child(1) {
+	top: -21em;
+	left: 6em;
+	/* background: linear-gradient(to top, rgba(208, 0, 0, 0.75), rgba(255, 230, 9, 0.75)); */
+	background: linear-gradient(to left top, #000000 60%, #5a189a, #47106b);
+	/* z-index: 1; */
+}
+
+.pot .circle:nth-child(2) {
+	bottom: -21em;
+	right: -41em;
+	/* background: linear-gradient(to top, rgba(30, 252, 252, 0.75) 55%, rgba(19, 255, 10, 0.75)); */
+	background: linear-gradient(to left top, #000000, #5a189a, #47106b);
+	/* z-index: 1; */
+}
+
+/*						merging card tilts   +    merging recommendation                           */
+
+.container {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 45em;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+
+.container .card {
+	position: initial;
+	line-height: 2.5em;
+	transform: scale(1.7);
+	width: 27em;
+	height: 36em;
+	margin: 2.1em;
+	box-shadow: 1.25em 1.25em 3.125em rgba(0, 0, 0, 0.5);
+	border-radius: 0.93em;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(1.25em);
+	transform: perspective(1000px);
+	transform-style: preserve-3d;
+}
+
+.container .card .content {
+	padding: 1.25em;
+	text-align: center;
+	transition: 0.5s;
+	transform: translateY(6.25em);
+	opacity: 0;
+}
+
+.container .card:hover .content {
+	transform: translateY(0px);
+	margin-top: 1.25em;
+	opacity: 1;
+}
+
+.container .card .content h2 {
+	position: absolute;
+	top: -5em;
+	right: 0.625em;
+	font-size: 12em;
+	color: rgba(255, 255, 255, 1);
+	pointer-events: none;
+}
+
+.container .card .content h3 {
+	font-size: 2.7em;
+	color: #fff;
+	z-index: 1;
+}
+
+.container .card .content p {
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: 300;
+}
+
+.container .card .content a {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 1.25em;
+	margin-top: 0.93em;
+	background: #fff;
+	color: #000;
+	border-radius: 1.25em;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-weight: 500;
+	box-shadow: 0 0.3125em 0.93em rgba(0, 0, 0, 0.2);
+}
+
+/* 
+
+
+Rule 1: Eat! Then Eat More
+Rule 2: Lift Like a Big Boy
+Rule 3: Perform Total-Body Workouts ONLY
+Rule 4: Less Movements Is More Muscle
+
+*/
+
+/* 		incorporating NAVBAR with the tilt page			*/
+
+.mug {
+	position: absolute;
+	top: 1.26em;
+	right: 57.99em;
+	/* right: em; */
+	z-index: 5;
+}
+
+ul {
+	transform: scale(0.8);
+	position: relative;
+	display: flex;
+	min-width: 450px;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+	/* background: linear-gradient(to left top, #000000, #5a189a, #47106b 60%); */
+	/* background: linear-gradient(-18deg, rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 0, 0, 0.5)); */
+	/* background: linear-gradient(to right bottom, rgba(90, 24, 154, 0.5), rgba(71, 16, 107, 0.7)); */
+	border-radius: 1.4em 1.4em 0em 0em;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 0px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+}
+
+ul li {
+	list-style: none;
+}
+
+ul li a {
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px 30px;
+	z-index: 1000;
+	/* backdrop-filter: blur(15px); */
+	/* transform-style: preserve-3d; */
+	/* transform: perspective(1000px); */
+	/* border-radius: 1em; */
+}
+
+ul li a ion-icon {
+	font-size: 2.6em;
+	/* color: #fff; */
+	pointer-events: none;
+	opacity: 0.25;
+	transition: 0.25s;
+	/* transform: translateZ(500px); */
+}
+
+ul li.active a ion-icon {
+	opacity: 1;
+}
+
+#marker {
+	position: absolute;
+	top: 0;
+	transition: 0.5s;
+	z-index: 1;
+}
+
+#marker::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 40px;
+	border-radius: 8px;
+	background: #5da6ff;
+	box-shadow: 0 0 15px #5decff, 0 0 30px #5da6ff, 0 0 45px #0e12fa, 0 0 60px #5da6ff;
+}
+
+ul li:nth-child(1).active ~ #marker::before {
+	background: #5decff;
+	box-shadow: 0 0 15px #5decff, 0 0 30px #5decff, 0 0 45px #5decff, 0 0 60px #5decff;
+}
+
+ul li:nth-child(2).active ~ #marker::before {
+	background: #ff00d9;
+	box-shadow: 0 0 15px #ff00d9, 0 0 30px #ff00d9, 0 0 45px #ff00d9, 0 0 60px #ff00d9;
+}
+
+ul li:nth-child(3).active ~ #marker::before {
+	background: #5decff;
+	box-shadow: 0 0 15px #5decff, 0 0 30px #5decff, 0 0 45px #5decff, 0 0 60px #5decff;
+}
+
+ul li:nth-child(4).active ~ #marker::before {
+	background: #ff00d9;
+	box-shadow: 0 0 15px #ff00d9, 0 0 30px #ff00d9, 0 0 45px #ff00d9, 0 0 60px #ff00d9;
+}
+
+ul li:nth-child(5).active ~ #marker::before {
+	background: #ff0396;
+	box-shadow: 0 0 15px #ff0396, 0 0 30px #ff0396, 0 0 45px #ff0396, 0 0 60px #ff0396;
+}
+
+.para {
+	display: inline;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Workout</title>
+    <link rel="stylesheet" href="/videoMeso.css">
+</head>
+<body>
+    <div class="backButton">
+       
+        <a href="#" onclick="history.back()"> <img id="rotate" src="/images/backButton.png" alt=""></a>
+    </div>
+
+
+    <div class="container">
+        <h1>MESOMorph Series</h1>
+        <div class="row">
+            
+            <div class="col">
+                <div class="cover-img">
+                    <h2>DAVIS DAILEY</h2>
+                    <img src="/images/introD.png" width="100%" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/introD.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <!-- 1st -->
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1437935690510-49ce2c715aee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/chestD.mp4')">
+                    <p>CHEST&<BR> TRICEPS <BR> WORKOUT</BR> </p>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/absD.mp4')">
+                    <p> ABS<BR>WORKOUT<BR>SERIES</p>
+                    </div>
+                </div>
+                <!-- 3rd --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/backD.mp4')">
+                    <p>BACK<BR>WORKOUT</BR> SERIES</p>
+                    </div>
+                </div>
+                <!-- 4th --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1590507621108-433608c97823?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmljZXAlMjBneW18ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/bicepD.mp4')">
+                    <p>BICEPS<BR>WORKOUT</BR> SERIES</p>
+                    </div>
+                </div>
+                <!--5th --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHw0MDk4NzYyNXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/shoulderD.mp4')">
+                    <p>SHOULDER<BR>WORKOUT</BR> SERIES</p>
+                    </div>
+                </div>
+                <!-- 6th --> 
+                <div class="small-img-row">
+                    <div class="small-img">
+                    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bGVncyUyMGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" >
+                    <img id="rotate" src="/images/play.png" class="play-btn" onclick="playVideo('/videos/legsD.mp4')">
+                    <p>LEGS <BR> WORKOUT </p>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+            <video id="myVideo" width="100%" height="750" controls >
+                <source src="/videos/yatinderIntro.mp4"  type="video/mp4"  >
+            </video>
+            <img id="rotate" src="/images/cancel.png" class="close-btn" onclick="stopVideo()">
+        </div>
+
+<script>
+
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none";
+        myVideo.pause();
+
+
+    }
+
+    function playVideo(file){
+
+        myVideo.src = file;
+        videoPlayer.style.display = "block";
+        myVideo.play();
+
+    }
+
+</script>
+
+
+
+    </body>
+</html>

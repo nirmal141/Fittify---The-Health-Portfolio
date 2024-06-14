@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Pen</title>
+    <link rel="stylesheet" href="/detailDeit.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <div class="backButton">
+       
+    <a href="#" onclick="history.back()"> <img id="rotate" src="/images/backButton.png" alt=""></a>
+</div>
+    
+    <video poster="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" id="bgvid" playsinline autoplay muted loop>
+        <!-- 
+      - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+      WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+      
+      <source src="/videos/dietVideo.mp4" type="video/mp4">
+      
+      </video>
+      <div id="polina">
+      <h1>Diet Plan</h1>
+      <p>A Christian Olsen Production - The Smoothie
+                <p><a id="myTag" href="https://www.myfitfuel.in/mffblog/ectomorph-diet-plan/">Read More</a>
+     
+                    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"  alt="...">
+                            <p class="d-block w-100" > Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos vel tempore, ex sunt ipsam nisi omnis aperiam voluptate quos optio fugit dolores at culpa, nulla error similique. Dolores adipisci consectetur laboriosam tempora cum quo! Cupiditate aut perspiciatis ullam culpa debitis distinctio aspernatur ducimus repudiandae, accusantium nisi deserunt numquam id porro.</p>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div> -->
+
+                      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                           <div class="dietSuggest">
+                             <h3><b><i>EctoMorphs </i> </b></h3>
+                             <ul style="list-style-type:square;">
+                               <li><p> <b> Keep Carbs content high:</b>
+                                Have good carbs incorporated in your diet. Raise your good fat content
+                              </p>
+                            </li> 
+                               <li><p> <b> Do good bulking:</b>
+                               Avoid junk food and try to eat at home as much as possible
+                              </p>
+                            </li> 
+                            </li> 
+                               <li><p> <b> Increase weight:</b>
+                               In order to increase your weight faster , increase your daily calorie intake(TDEE) by 20% 
+                              </p>
+                            </li> 
+                            </li> 
+                               <li><p> <b> Supplements:</b>
+                              Including amino acids and zinc in your diet will help you build up muscles faster
+                              </p>
+                            </li> 
+                            </ul>
+                              
+                           </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="dietSuggest">
+                              <h3><b><i>EndoMorphs </i> </b></h3>
+                              <ul style="list-style-type:square;">
+                                <li><p> <b> Keep Carbs content low:</b>
+                                 Keep carbs intake low. Have healthy fats, do avoid even an extra bite of that cake
+                               </p>
+                             </li> 
+                                <li><p> <b> Do healthy leaning:</b>
+                                Do lower your carbs content but don't overdo it. Avoid skipping meals or you'll face fatigue
+                               </p>
+                             </li> 
+                             </li> 
+                                <li><p> <b> Decrease weight:</b>
+                                In order to decrease your weight faster , decrease your daily calorie intake(TDEE) by 20% 
+                               </p>
+                             </li> 
+                             </li> 
+                                <li><p> <b> Supplements:</b>
+                               Including Creatine and Whey Protien will prove the best for you
+                               </p>
+                             </li> 
+                             </ul>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="dietSuggest">
+                              <h3><b><i> MesoMorphs </i> </b></h3>
+                             <ul style="list-style-type:square;">
+                               <li><p> <b> Keep Carbs and Fats balanced:</b>
+                                You should balance your carbs and fat content in order to preserve your muscles
+                              </p>
+                            </li> 
+                               <li><p> <b> Maintain and Gain:</b>
+                              You can easily increase or decrease your weight according to self
+                              </p>
+                            </li> 
+                            </li> 
+                               <li><p> <b> Maintain weight:</b>
+                              Keep your daily calorie intake constant in order to maintain your weight 
+                              </p>
+                            </li> 
+                            </li> 
+                               <li><p> <b> Supplements:</b>
+                             "RESEARCH IN PROGRESS"
+                              </p>
+                            </li> 
+                            </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev myBtn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next myBtn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+      <button id="btn">Pause</button>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      
+      <script >
+        var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#btn");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+      </script>
+</body>
+</html>
